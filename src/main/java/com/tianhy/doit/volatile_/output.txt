@@ -1,0 +1,210 @@
+Classfile /F:/StudyWorkSpaces/multiThread/src/main/java/com/tianhy/doit/volatile_/VolatileTest.class
+  Last modified 2020-2-27; size 1312 bytes
+  MD5 checksum 6880572b5f53339603111f7b75650670
+  Compiled from "VolatileTest.java"
+public class com.tianhy.doit.volatile_.VolatileTest
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Fieldref           #6.#39         // com/tianhy/doit/volatile_/VolatileTest.count:I
+   #2 = Methodref          #16.#40        // java/lang/Object."<init>":()V
+   #3 = Class              #41            // com/tianhy/doit/volatile_/VolatileTest$SubtractThread
+   #4 = Methodref          #3.#42         // com/tianhy/doit/volatile_/VolatileTest$SubtractThread."<init>":(Lcom/tianhy/doit/volatile_/VolatileTest$1;)V
+   #5 = Methodref          #3.#43         // com/tianhy/doit/volatile_/VolatileTest$SubtractThread.start:()V
+   #6 = Class              #44            // com/tianhy/doit/volatile_/VolatileTest
+   #7 = Methodref          #3.#45         // com/tianhy/doit/volatile_/VolatileTest$SubtractThread.isAlive:()Z
+   #8 = Fieldref           #46.#47        // java/lang/System.out:Ljava/io/PrintStream;
+   #9 = Class              #48            // java/lang/StringBuilder
+  #10 = Methodref          #9.#40         // java/lang/StringBuilder."<init>":()V
+  #11 = String             #49            // count=
+  #12 = Methodref          #9.#50         // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #13 = Methodref          #9.#51         // java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+  #14 = Methodref          #9.#52         // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #15 = Methodref          #53.#54        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #16 = Class              #55            // java/lang/Object
+  #17 = Class              #56            // com/tianhy/doit/volatile_/VolatileTest$1
+  #18 = Utf8               InnerClasses
+  #19 = Utf8               SubtractThread
+  #20 = Utf8               count
+  #21 = Utf8               I
+  #22 = Utf8               NUMBER
+  #23 = Utf8               ConstantValue
+  #24 = Integer            10000
+  #25 = Utf8               <init>
+  #26 = Utf8               ()V
+  #27 = Utf8               Code
+  #28 = Utf8               LineNumberTable
+  #29 = Utf8               main
+  #30 = Utf8               ([Ljava/lang/String;)V
+  #31 = Utf8               StackMapTable
+  #32 = Class              #41            // com/tianhy/doit/volatile_/VolatileTest$SubtractThread
+  #33 = Utf8               disorder
+  #34 = Utf8               access$110
+  #35 = Utf8               ()I
+  #36 = Utf8               <clinit>
+  #37 = Utf8               SourceFile
+  #38 = Utf8               VolatileTest.java
+  #39 = NameAndType        #20:#21        // count:I
+  #40 = NameAndType        #25:#26        // "<init>":()V
+  #41 = Utf8               com/tianhy/doit/volatile_/VolatileTest$SubtractThread
+  #42 = NameAndType        #25:#57        // "<init>":(Lcom/tianhy/doit/volatile_/VolatileTest$1;)V
+  #43 = NameAndType        #58:#26        // start:()V
+  #44 = Utf8               com/tianhy/doit/volatile_/VolatileTest
+  #45 = NameAndType        #59:#60        // isAlive:()Z
+  #46 = Class              #61            // java/lang/System
+  #47 = NameAndType        #62:#63        // out:Ljava/io/PrintStream;
+  #48 = Utf8               java/lang/StringBuilder
+  #49 = Utf8               count=
+  #50 = NameAndType        #64:#65        // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #51 = NameAndType        #64:#66        // append:(I)Ljava/lang/StringBuilder;
+  #52 = NameAndType        #67:#68        // toString:()Ljava/lang/String;
+  #53 = Class              #69            // java/io/PrintStream
+  #54 = NameAndType        #70:#71        // println:(Ljava/lang/String;)V
+  #55 = Utf8               java/lang/Object
+  #56 = Utf8               com/tianhy/doit/volatile_/VolatileTest$1
+  #57 = Utf8               (Lcom/tianhy/doit/volatile_/VolatileTest$1;)V
+  #58 = Utf8               start
+  #59 = Utf8               isAlive
+  #60 = Utf8               ()Z
+  #61 = Utf8               java/lang/System
+  #62 = Utf8               out
+  #63 = Utf8               Ljava/io/PrintStream;
+  #64 = Utf8               append
+  #65 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #66 = Utf8               (I)Ljava/lang/StringBuilder;
+  #67 = Utf8               toString
+  #68 = Utf8               ()Ljava/lang/String;
+  #69 = Utf8               java/io/PrintStream
+  #70 = Utf8               println
+  #71 = Utf8               (Ljava/lang/String;)V
+{
+  public com.tianhy.doit.volatile_.VolatileTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #2                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 8: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: new           #3                  // class com/tianhy/doit/volatile_/VolatileTest$SubtractThread
+         3: dup
+         4: aconst_null
+         5: invokespecial #4                  // Method com/tianhy/doit/volatile_/VolatileTest$SubtractThread."<init>":(Lcom/tianhy/doit/volatile_/VolatileTest$1;)V
+         8: astore_1
+         9: aload_1
+        10: invokevirtual #5                  // Method com/tianhy/doit/volatile_/VolatileTest$SubtractThread.start:()V
+        13: iconst_0
+        14: istore_2
+        15: iload_2
+        16: sipush        10000
+        19: if_icmpge     36
+        //读取count的值，并压入操作栈栈顶
+        22: getstatic     #1                  // Field count:I
+        //常量1压如操作栈
+        25: iconst_1
+        //将栈顶两个元素相加
+        26: iadd
+        //将运算结果赋值给 count
+        27: putstatic     #1                  // Field count:I
+        30: iinc          2, 1
+        33: goto          15
+        36: aload_1
+        37: invokevirtual #7                  // Method com/tianhy/doit/volatile_/VolatileTest$SubtractThread.isAlive:()Z
+        40: ifeq          46
+        43: goto          36
+        46: getstatic     #8                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        49: new           #9                  // class java/lang/StringBuilder
+        52: dup
+        53: invokespecial #10                 // Method java/lang/StringBuilder."<init>":()V
+        56: ldc           #11                 // String count=
+        58: invokevirtual #12                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        61: getstatic     #1                  // Field count:I
+        64: invokevirtual #13                 // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        67: invokevirtual #14                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        70: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        73: goto          73
+      LineNumberTable:
+        line 11: 0
+        line 12: 9
+        line 14: 13
+        line 15: 22
+        line 14: 30
+        line 17: 36
+        line 21: 46
+        line 23: 73
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 15
+          locals = [ class com/tianhy/doit/volatile_/VolatileTest$SubtractThread, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 20
+        frame_type = 9 /* same */
+        frame_type = 26 /* same */
+
+  public static void disorder();
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=0
+         0: iconst_1
+         1: istore_0
+         2: iconst_2
+         3: istore_1
+         4: iconst_3
+         5: istore_2
+         6: iload_0
+         7: iconst_1
+         8: iadd
+         9: istore_0
+        10: iload_0
+        11: iload_1
+        12: iadd
+        13: iload_2
+        14: iadd
+        15: istore_3
+        16: return
+      LineNumberTable:
+        line 30: 0
+        line 31: 2
+        line 32: 4
+        line 33: 6
+        line 34: 10
+        line 35: 16
+
+  static int access$110();
+    descriptor: ()I
+    flags: ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=0, args_size=0
+         0: getstatic     #1                  // Field count:I
+         3: dup
+         4: iconst_1
+         5: isub
+         6: putstatic     #1                  // Field count:I
+         9: ireturn
+      LineNumberTable:
+        line 8: 0
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: iconst_0
+         1: putstatic     #1                  // Field count:I
+         4: return
+      LineNumberTable:
+        line 38: 0
+}
+SourceFile: "VolatileTest.java"
+InnerClasses:
+     static #17; //class com/tianhy/doit/volatile_/VolatileTest$1
